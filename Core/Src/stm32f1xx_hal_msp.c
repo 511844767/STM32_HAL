@@ -69,13 +69,11 @@ void HAL_MspInit(void)
   __HAL_RCC_AFIO_CLK_ENABLE();
   __HAL_RCC_PWR_CLK_ENABLE();
 
-  HAL_NVIC_SetPriorityGrouping(NVIC_PRIORITYGROUP_2);
-
   /* System interrupt init*/
 
-  /** NONJTRST: Full SWJ (JTAG-DP + SW-DP) but without NJTRST
+  /** NOJTAG: JTAG-DP Disabled and SW-DP Enabled
   */
-  __HAL_AFIO_REMAP_SWJ_NONJTRST();
+  __HAL_AFIO_REMAP_SWJ_NOJTAG();
 
   /* USER CODE BEGIN MspInit 1 */
 
