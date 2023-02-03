@@ -1,0 +1,7 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+    "files.associations": {
+        "main.h": "c",
+        "stm32f1xx_hal.h": "c"
+    }
+}

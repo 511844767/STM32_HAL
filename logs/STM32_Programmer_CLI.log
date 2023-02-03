@@ -1,0 +1,196 @@
+15:54:53:058       -------------------------------------------------------------------
+15:54:53:058                        STM32CubeProgrammer v2.12.0                  
+15:54:53:058       -------------------------------------------------------------------
+
+15:54:53:058 
+
+15:54:53:058 Log output file:   logs/STM32_Programmer_CLI.log
+15:54:53:058 Command line:  -c port=swd freq=9000 -w "build/STM32_HAL.bin" 0x8000000 -s 0x8000000 -log "logs/STM32_Programmer_CLI.log"
+15:54:53:058 
+15:54:53:064 ST-LINK SN  : 1528020A2316303030303032
+15:54:53:064 ST-LINK FW  : V2J40S7
+15:54:53:064 Board       : --
+15:54:53:065 Voltage     : 3.12V
+15:54:53:071 SWD freq    : 4000 KHz
+15:54:53:071 Connect mode: Normal
+15:54:53:071 Reset mode  : Software reset
+15:54:53:072 Device ID   : 0x414
+15:54:53:073 Revision ID : Rev X
+15:54:53:076 flash loader /home/tanjie/EmbeddedLibrary/STM32CudeProgrammer/bin/FlashLoader/0x414.stldr is loaded
+15:54:53:078 Device name : STM32F101/F103 High-density
+15:54:53:078 Reading data...
+15:54:53:078 r ap 0 @0x1FFFF7E0 0x00000004 bytes Data 0xFFFF0200
+15:54:53:078 Flash size  : 512 KBytes
+15:54:53:079 Device type : MCU
+15:54:53:079 Device CPU  : Cortex-M3
+15:54:53:080 r ap 0 @0x0000FFFF 0x00000004 bytes Data 0xFFFFFFFF
+15:54:53:080 BL Version  : --
+15:54:53:080 
+15:54:53:083 
+
+15:54:53:083 Memory Programming ...
+15:54:53:083 Opening and parsing file: STM32_HAL.bin
+15:54:53:083   File          : STM32_HAL.bin
+15:54:53:083   Size          : 10.50 KB 
+15:54:53:083   Address       : 0x08000000 
+15:54:53:083 
+
+15:54:53:084 Erasing Segment <0> Address <0x08000000> Size <10756>Bytes
+15:54:53:084 Erasing memory corresponding to segment 0:
+15:54:53:084 Memory erase...
+15:54:53:085 halt ap 0 
+15:54:53:085 w ap 0 reg 15 PC   (0x20000000)  
+15:54:53:086 w ap 0 reg 17 MSP  (0x20000500)  
+15:54:53:086 w ap 0 reg 16 xPSR (0x01000000)  
+15:54:53:090 w ap 0 @0x20000960 : 0x00000200 bytes, Data 0x00000000...
+15:54:53:091 w ap 0 @0x20000000 : 0x00000004 bytes, Data 0x0000BE00...
+15:54:53:100 w ap 0 @0x20000004 : 0x0000053E bytes, Data 0xF000B580...
+15:54:53:100 Erasing internal memory sectors [0 5]
+15:54:53:100 Init flashloader...
+15:54:53:101 halt ap 0 
+15:54:53:101 w ap 0 reg 0 R0   0x00000001
+15:54:53:102 w ap 0 reg 1 R1   0x00000000
+15:54:53:102 w ap 0 reg 2 R2   0x00000000
+15:54:53:103 w ap 0 reg 3 R3   0x00000000
+15:54:53:103 w ap 0 reg 4 R4   0x00000000
+15:54:53:104 w ap 0 reg 5 R5   0x00000000
+15:54:53:104 w ap 0 reg 6 R6   0x00000000
+15:54:53:105 w ap 0 reg 7 R7   0x00000000
+15:54:53:105 w ap 0 reg 8 R8   0x00000000
+15:54:53:106 w ap 0 reg 9 R9   0x00000000
+15:54:53:106 w ap 0 reg 10 R10  0x00000000
+15:54:53:107 w ap 0 reg 11 R11  0x00000000
+15:54:53:107 w ap 0 reg 12 R12  0x00000000
+15:54:53:108 w ap 0 reg 13 SP   0x00000000
+15:54:53:108 w ap 0 reg 14 LR   0x20000001
+15:54:53:109 w ap 0 reg 15 PC   0x20000005
+15:54:53:109 w ap 0 reg 16 xPSR 0x01000000
+15:54:53:110 w ap 0 reg 17 MSP  0x2000093E
+15:54:53:110 w ap 0 reg 18 PSP  0x00000000
+15:54:53:110 run ap 0 
+15:54:53:111 halt ap 0 
+15:54:53:112 r ap 0 reg 0 R0   0x00000001
+15:54:53:112 Loader sector erase...
+15:54:53:112 w ap 0 reg 0 R0   0x08000000
+15:54:53:113 w ap 0 reg 1 R1   0x08002800
+15:54:53:114 w ap 0 reg 2 R2   0x00000002
+15:54:53:114 w ap 0 reg 3 R3   0x00000000
+15:54:53:115 w ap 0 reg 4 R4   0x00000000
+15:54:53:115 w ap 0 reg 5 R5   0x00000000
+15:54:53:116 w ap 0 reg 6 R6   0x00000000
+15:54:53:116 w ap 0 reg 7 R7   0x00000000
+15:54:53:116 w ap 0 reg 8 R8   0x00000000
+15:54:53:117 w ap 0 reg 9 R9   0x00000000
+15:54:53:117 w ap 0 reg 10 R10  0x00000000
+15:54:53:118 w ap 0 reg 11 R11  0x00000000
+15:54:53:118 w ap 0 reg 12 R12  0x00000000
+15:54:53:119 w ap 0 reg 13 SP   0x00000000
+15:54:53:119 w ap 0 reg 14 LR   0x20000001
+15:54:53:120 w ap 0 reg 15 PC   0x200001AF
+15:54:53:120 w ap 0 reg 16 xPSR 0x01000000
+15:54:53:121 w ap 0 reg 17 MSP  0x2000093E
+15:54:53:121 w ap 0 reg 18 PSP  0x00000000
+15:54:53:121 run ap 0 
+15:54:53:254 halt ap 0 
+15:54:53:255 r ap 0 reg 0 R0   0x00000001
+15:54:53:255 erase: 0171ms
+15:54:53:255 Download in Progress:
+15:54:53:255   Size          : 10756 Bytes
+15:54:53:255   Address       : 0x08000000 
+15:54:53:255 
+
+15:54:53:255 Buffer program...
+15:54:53:256 halt ap 0 
+15:54:53:256 w ap 0 reg 15 PC   (0x20000000)  
+15:54:53:257 w ap 0 reg 17 MSP  (0x20000500)  
+15:54:53:257 w ap 0 reg 16 xPSR (0x01000000)  
+15:54:53:261 w ap 0 @0x20000960 : 0x00000200 bytes, Data 0x00000000...
+15:54:53:262 w ap 0 @0x20000000 : 0x00000004 bytes, Data 0x0000BE00...
+15:54:53:272 w ap 0 @0x20000004 : 0x0000053E bytes, Data 0xF000B580...
+15:54:53:272 Loader write range...
+15:54:53:309 w ap 0 @0x20000960 : 0x00001504 bytes, Data 0x20010000...
+15:54:53:309 W B1 in RAM @0x20000960 size 0x00001504 : 0037ms
+15:54:53:309 Init flashloader...
+15:54:53:310 halt ap 0 
+15:54:53:311 w ap 0 reg 0 R0   0x00000001
+15:54:53:311 w ap 0 reg 1 R1   0x00000000
+15:54:53:312 w ap 0 reg 2 R2   0x00000000
+15:54:53:312 w ap 0 reg 3 R3   0x00000000
+15:54:53:313 w ap 0 reg 4 R4   0x00000000
+15:54:53:314 w ap 0 reg 5 R5   0x00000000
+15:54:53:314 w ap 0 reg 6 R6   0x00000000
+15:54:53:315 w ap 0 reg 7 R7   0x00000000
+15:54:53:315 w ap 0 reg 8 R8   0x00000000
+15:54:53:316 w ap 0 reg 9 R9   0x00000000
+15:54:53:316 w ap 0 reg 10 R10  0x00000000
+15:54:53:316 w ap 0 reg 11 R11  0x00000000
+15:54:53:317 w ap 0 reg 12 R12  0x00000000
+15:54:53:317 w ap 0 reg 13 SP   0x00000000
+15:54:53:318 w ap 0 reg 14 LR   0x20000001
+15:54:53:318 w ap 0 reg 15 PC   0x20000005
+15:54:53:319 w ap 0 reg 16 xPSR 0x01000000
+15:54:53:319 w ap 0 reg 17 MSP  0x2000093E
+15:54:53:320 w ap 0 reg 18 PSP  0x00000000
+15:54:53:320 run ap 0 
+15:54:53:320 halt ap 0 
+15:54:53:321 r ap 0 reg 0 R0   0x00000001
+15:54:53:321 w ap 0 reg 0 R0   0x08000000
+15:54:53:322 w ap 0 reg 1 R1   0x00001504
+15:54:53:322 w ap 0 reg 2 R2   0x20000960
+15:54:53:323 w ap 0 reg 3 R3   0x00000002
+15:54:53:323 w ap 0 reg 4 R4   0x00000000
+15:54:53:324 w ap 0 reg 5 R5   0x00000000
+15:54:53:324 w ap 0 reg 6 R6   0x00000000
+15:54:53:324 w ap 0 reg 7 R7   0x00000000
+15:54:53:325 w ap 0 reg 8 R8   0x00000000
+15:54:53:325 w ap 0 reg 9 R9   0x00000000
+15:54:53:326 w ap 0 reg 10 R10  0x00000000
+15:54:53:326 w ap 0 reg 11 R11  0x00000000
+15:54:53:327 w ap 0 reg 12 R12  0x00000000
+15:54:53:327 w ap 0 reg 13 SP   0x00000000
+15:54:53:328 w ap 0 reg 14 LR   0x20000001
+15:54:53:328 w ap 0 reg 15 PC   0x2000002F
+15:54:53:329 w ap 0 reg 16 xPSR 0x01000000
+15:54:53:329 w ap 0 reg 17 MSP  0x2000093E
+15:54:53:330 w ap 0 reg 18 PSP  0x00000000
+15:54:53:330 run ap 0 
+15:54:53:366 w ap 0 @0x20001E64 : 0x00001500 bytes, Data 0x60CA0240...
+15:54:53:366 W B2 in RAM @0x20008360 size 0x00001500: 0057ms
+15:54:53:516 r ap 0 reg 0 R0   0x00000001
+15:54:53:516 Wait W B1 in Flash @0x08000000 size 0x00001504: 0150ms
+15:54:53:517 w ap 0 reg 0 R0   0x08001504
+15:54:53:518 w ap 0 reg 1 R1   0x00001500
+15:54:53:518 w ap 0 reg 2 R2   0x20001E64
+15:54:53:519 w ap 0 reg 3 R3   0x00000002
+15:54:53:519 w ap 0 reg 4 R4   0x00000000
+15:54:53:519 w ap 0 reg 5 R5   0x00000000
+15:54:53:520 w ap 0 reg 6 R6   0x00000000
+15:54:53:520 w ap 0 reg 7 R7   0x00000000
+15:54:53:521 w ap 0 reg 8 R8   0x00000000
+15:54:53:521 w ap 0 reg 9 R9   0x00000000
+15:54:53:522 w ap 0 reg 10 R10  0x00000000
+15:54:53:522 w ap 0 reg 11 R11  0x00000000
+15:54:53:523 w ap 0 reg 12 R12  0x00000000
+15:54:53:523 w ap 0 reg 13 SP   0x00000000
+15:54:53:524 w ap 0 reg 14 LR   0x20000001
+15:54:53:524 w ap 0 reg 15 PC   0x2000002F
+15:54:53:525 w ap 0 reg 16 xPSR 0x01000000
+15:54:53:525 w ap 0 reg 17 MSP  0x2000093E
+15:54:53:526 w ap 0 reg 18 PSP  0x00000000
+15:54:53:526 run ap 0 
+15:54:53:713 r ap 0 reg 0 R0   0x00000001
+15:54:53:713 Write elapsed time: 0441ms
+15:54:53:713 Segment[0] downloaded successfully
+15:54:53:713 
+
+15:54:53:713 File download complete
+15:54:53:713 Time elapsed during download operation: 00:00:00.630
+15:54:53:715 
+RUNNING Program ... 
+15:54:53:715   Address:      : 0x8000000
+15:54:53:719 w ap 0 reg 15 PC   0x0800187D
+15:54:53:719 w ap 0 reg 17 MSP  0x20010000
+15:54:53:720 w ap 0 reg 16 xPSR 0x01000000
+15:54:53:720 Application is running, Please Hold on...
+15:54:53:720 Start operation achieved successfully
+15:54:53:722 Disconnected

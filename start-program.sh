@@ -1,0 +1,1 @@
+STM32_Programmer_CLI -c port=swd freq=9000 -w build/STM32_HAL.bin 0x8000000 -s 0x8000000 -log logs/STM32_Programmer_CLI.log
