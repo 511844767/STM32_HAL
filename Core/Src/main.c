@@ -18,13 +18,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "usart.h"
+#include "usb_device.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include"stdio.h"
 #include"delay.h"
+#include"usbd_hid.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -86,22 +86,47 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_USART1_UART_Init();
+  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
-  
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  extern USBD_HandleTypeDef hUsbDeviceFS;
+  struct KEYBRD_ReportTypeDef {
+    uint8_t control;
+    uint8_t dummy;
+    uint8_t key[6];
+  } KEYBRDReport = {0, 0, {0, 0, 0, 0, 0, 0}};
   while (1)
   {
+    /* 按键检测 */
+    if(KEY0_IS_PRESS()) // shift
+    {
+      KEYBRDReport.control |= 0b00000010;
+    }else{
+      KEYBRDReport.control &= 0b11111101;
+    }
+
+    if(KEY1_IS_PRESS()) // f
+    {
+      KEYBRDReport.key[0] = 0x09;
+    }else{
+      KEYBRDReport.key[0] = 0;
+    }
+
+    if(KEY_UP_IS_PRESS()) // e
+    {
+      KEYBRDReport.key[1] = 0x08;
+    }else{
+      KEYBRDReport.key[1] = 0;
+    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    LED0_TOGGLE();
-    delay_s(1);
-    LED1_TOGGLE();
-    delay_s(1);
+    USBD_HID_SendReport(&hUsbDeviceFS, (uint8_t*)&KEYBRDReport, 8); // 通过USB发送数据
+    delay_ms(10);
   }
   /* USER CODE END 3 */
 }
@@ -114,6 +139,7 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
@@ -140,6 +166,12 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
+  PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL_DIV1_5;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
   }

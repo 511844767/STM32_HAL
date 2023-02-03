@@ -29,16 +29,14 @@ extern "C" {
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-#define LED0_ON() HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_RESET)
-#define LED0_OFF() HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_SET)
-#define LED1_ON() HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET)
-#define LED1_OFF() HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET)
-#define LED0_TOGGLE()  HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin)
-#define LED1_TOGGLE()  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin)
+
 /* USER CODE END Includes */
 
 /* USER CODE BEGIN Private defines */
-
+/* 按键检测 */
+#define KEY0_IS_PRESS() (HAL_GPIO_ReadPin(KEY0_GPIO_Port, KEY0_Pin) == GPIO_PIN_RESET)
+#define KEY1_IS_PRESS() (HAL_GPIO_ReadPin(KEY1_GPIO_Port, KEY1_Pin) == GPIO_PIN_RESET)
+#define KEY_UP_IS_PRESS() (HAL_GPIO_ReadPin(KEY_UP_GPIO_Port, KEY_UP_Pin) != GPIO_PIN_RESET)
 /* USER CODE END Private defines */
 
 void MX_GPIO_Init(void);
