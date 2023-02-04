@@ -1,6 +1,6 @@
 build/usbd_hid.o: \
- Middlewares/ST/STM32_USB_Device_Library/Class/Keyboard_HID/Src/usbd_hid.c \
- Middlewares/ST/STM32_USB_Device_Library/Class/Keyboard_HID/Inc/usbd_hid.h \
+ Middlewares/ST/STM32_USB_Device_Library/Class/Keyboard_Mouse_HID/Src/usbd_hid.c \
+ Middlewares/ST/STM32_USB_Device_Library/Class/Keyboard_Mouse_HID/Inc/usbd_hid.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  USB_DEVICE/Target/usbd_conf.h Core/Inc/main.h \
@@ -31,7 +31,7 @@ build/usbd_hid.o: \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
-Middlewares/ST/STM32_USB_Device_Library/Class/Keyboard_HID/Inc/usbd_hid.h:
+Middlewares/ST/STM32_USB_Device_Library/Class/Keyboard_Mouse_HID/Inc/usbd_hid.h:
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
 USB_DEVICE/Target/usbd_conf.h:

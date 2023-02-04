@@ -26,7 +26,7 @@ build/main.o: Core/Src/main.c Core/Inc/main.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  USB_DEVICE/Target/usbd_conf.h Core/Inc/gpio.h Core/Inc/main.h \
  Core/Inc/delay.h \
- Middlewares/ST/STM32_USB_Device_Library/Class/Keyboard_HID/Inc/usbd_hid.h \
+ Middlewares/ST/STM32_USB_Device_Library/Class/Keyboard_Mouse_HID/Inc/usbd_hid.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
@@ -64,7 +64,7 @@ USB_DEVICE/Target/usbd_conf.h:
 Core/Inc/gpio.h:
 Core/Inc/main.h:
 Core/Inc/delay.h:
-Middlewares/ST/STM32_USB_Device_Library/Class/Keyboard_HID/Inc/usbd_hid.h:
+Middlewares/ST/STM32_USB_Device_Library/Class/Keyboard_Mouse_HID/Inc/usbd_hid.h:
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:

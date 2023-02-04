@@ -13,7 +13,7 @@
 ######################################
 # target
 ######################################
-TARGET = USB_HID
+TARGET = STM32_HAL
 
 
 ######################################
@@ -63,7 +63,7 @@ Core/Src/system_stm32f1xx.c \
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c \
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c \
-Middlewares/ST/STM32_USB_Device_Library/Class/Keyboard_HID/Src/usbd_hid.c \
+Middlewares/ST/STM32_USB_Device_Library/Class/Keyboard_Mouse_HID/Src/usbd_hid.c \
 Core/Src/delay.c
 
 # ASM sources
@@ -127,7 +127,7 @@ C_INCLUDES =  \
 -IDrivers/STM32F1xx_HAL_Driver/Inc \
 -IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy \
 -IMiddlewares/ST/STM32_USB_Device_Library/Core/Inc \
--IMiddlewares/ST/STM32_USB_Device_Library/Class/Keyboard_HID/Inc \
+-IMiddlewares/ST/STM32_USB_Device_Library/Class/Keyboard_Mouse_HID/Inc \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/CMSIS/Include
 
