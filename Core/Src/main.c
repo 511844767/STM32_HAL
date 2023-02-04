@@ -154,6 +154,7 @@ int main(void)
       /* 键盘按下信号后必须跟着键盘松开信号，否则将持续处于按下状态 */
       USBD_HID_SendReport(&hUsbDeviceFS, (uint8_t*)&KEYBRD_ON_Report, 9);  // 键盘按下
       delay_ms(15); /* 间隔时间理论上与轮询时间bInterval有关，但实际实验时应该比轮询时间大 */
+                    // TODO: 为什么时间间隔只能手动调试，有没有计算方法或者其他方法控制发送间隔
       USBD_HID_SendReport(&hUsbDeviceFS, (uint8_t*)&KEYBRD_OFF_Report, 9); // 键盘松开
       delay_ms(15);
     }
