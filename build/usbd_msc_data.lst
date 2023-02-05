@@ -1,0 +1,56 @@
+ARM GAS  /tmp/ccp792fH.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.arch armv7-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"usbd_msc_data.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_data.c"
+  18              		.global	MSC_Mode_Sense10_data
+  19              		.section	.rodata.MSC_Mode_Sense10_data,"a"
+  20              		.align	2
+  23              	MSC_Mode_Sense10_data:
+  24 0000 00060000 		.ascii	"\000\006\000\000\000\000\000\000"
+  24      00000000 
+  25              		.global	MSC_Mode_Sense6_data
+  26              		.section	.rodata.MSC_Mode_Sense6_data,"a"
+  27              		.align	2
+  30              	MSC_Mode_Sense6_data:
+  31 0000 00000000 		.space	8
+  31      00000000 
+  32              		.global	MSC_Page00_Inquiry_Data
+  33              		.section	.rodata.MSC_Page00_Inquiry_Data,"a"
+  34              		.align	2
+  37              	MSC_Page00_Inquiry_Data:
+  38 0000 00000003 		.ascii	"\000\000\000\003\000\200\203"
+  38      008083
+  39              		.text
+  40              	.Letext0:
+  41              		.file 2 "/home/tanjie/EmbeddedLibrary/arm-gnu-toolchain-12.2.rel1-x86_64-arm-none-eabi/arm-none-ea
+  42              		.file 3 "/home/tanjie/EmbeddedLibrary/arm-gnu-toolchain-12.2.rel1-x86_64-arm-none-eabi/arm-none-ea
+  43              		.file 4 "Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_data.h"
+ARM GAS  /tmp/ccp792fH.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 usbd_msc_data.c
+     /tmp/ccp792fH.s:23     .rodata.MSC_Mode_Sense10_data:0000000000000000 MSC_Mode_Sense10_data
+     /tmp/ccp792fH.s:20     .rodata.MSC_Mode_Sense10_data:0000000000000000 $d
+     /tmp/ccp792fH.s:30     .rodata.MSC_Mode_Sense6_data:0000000000000000 MSC_Mode_Sense6_data
+     /tmp/ccp792fH.s:27     .rodata.MSC_Mode_Sense6_data:0000000000000000 $d
+     /tmp/ccp792fH.s:37     .rodata.MSC_Page00_Inquiry_Data:0000000000000000 MSC_Page00_Inquiry_Data
+     /tmp/ccp792fH.s:34     .rodata.MSC_Page00_Inquiry_Data:0000000000000000 $d
+
+NO UNDEFINED SYMBOLS

@@ -23,8 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include"delay.h"
-#include"usbd_hid.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -81,7 +80,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-  delay_init();
+  
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -93,72 +92,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  extern USBD_HandleTypeDef hUsbDeviceFS;
-  typedef struct KEYBRD_ReportTypeDef {
-    uint8_t reportID;
-    uint8_t control;
-    uint8_t dummy;
-    uint8_t key[6];
-  } KEYBRD_ReportTypeDef_t;
-  KEYBRD_ReportTypeDef_t KEYBRD_ON_Report = {1, 0, 0, {0, 0, 0, 0, 0, 0}};
-  KEYBRD_ReportTypeDef_t KEYBRD_OFF_Report = {1, 0, 0, {0, 0, 0, 0, 0, 0}};
-  struct MOUSE_ReportTypeDef {
-    uint8_t reportID;
-    uint8_t button;
-    uint8_t moveX;
-    uint8_t moveY;
-    uint8_t dummy[5];
-  } MOUSEReport = {2, 0, 0, 0, {0, 0, 0, 0, 0}};
-
-  int mouseSendFlag = 0, keybrdSendFlag = 0;
-
   while (1)
   {
-    mouseSendFlag = 0;
-    keybrdSendFlag = 0;
-
-    /* 按键检测 */
-    if(KEY0_IS_PRESS()) // 鼠标x方向移动
-    {
-      MOUSEReport.moveX = 2;
-      mouseSendFlag = 1;
-    }else{
-      MOUSEReport.moveX = 0;
-    }
-
-    if(KEY1_IS_PRESS()) // f
-    {
-      KEYBRD_ON_Report.key[0] = 0x09;
-      keybrdSendFlag = 1;
-    }else{
-      KEYBRD_ON_Report.key[0] = 0;
-    }
-
-    if(KEY_UP_IS_PRESS()) // e
-    {
-      KEYBRD_ON_Report.key[1] = 0x08;
-      keybrdSendFlag = 1;
-    }else{
-      KEYBRD_ON_Report.key[1] = 0;
-    }
     /* USER CODE END WHILE */
-
+    
     /* USER CODE BEGIN 3 */
-    if(mouseSendFlag == 1)
-    {
-      USBD_HID_SendReport(&hUsbDeviceFS, (uint8_t*)&MOUSEReport, 9);  // 通过USB发送数据
-      delay_ms(15);
-    }
-    if(keybrdSendFlag == 1)
-    {
-      /* 键盘按下信号后必须跟着键盘松开信号，否则将持续处于按下状态 */
-      USBD_HID_SendReport(&hUsbDeviceFS, (uint8_t*)&KEYBRD_ON_Report, 9);  // 键盘按下
-      delay_ms(15); /* 间隔时间理论上与轮询时间bInterval有关，但实际实验时应该比轮询时间大 */
-      USBD_HID_SendReport(&hUsbDeviceFS, (uint8_t*)&KEYBRD_OFF_Report, 9); // 键盘松开
-      delay_ms(15);
-    }
-    if(keybrdSendFlag == 0 && mouseSendFlag == 0)
-      delay_ms(15);
   }
   /* USER CODE END 3 */
 }

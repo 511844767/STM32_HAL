@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccpSmT9W.s 			page 1
+ARM GAS  /tmp/ccE3VjoD.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -51,49 +51,50 @@ ARM GAS  /tmp/ccpSmT9W.s 			page 1
   23:USB_DEVICE/App/usb_device.c **** #include "usb_device.h"
   24:USB_DEVICE/App/usb_device.c **** #include "usbd_core.h"
   25:USB_DEVICE/App/usb_device.c **** #include "usbd_desc.h"
-  26:USB_DEVICE/App/usb_device.c **** #include "usbd_hid.h"
-  27:USB_DEVICE/App/usb_device.c **** 
-  28:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN Includes */
-  29:USB_DEVICE/App/usb_device.c **** 
-  30:USB_DEVICE/App/usb_device.c **** /* USER CODE END Includes */
-  31:USB_DEVICE/App/usb_device.c **** 
-  32:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN PV */
-ARM GAS  /tmp/ccpSmT9W.s 			page 2
+  26:USB_DEVICE/App/usb_device.c **** #include "usbd_msc.h"
+  27:USB_DEVICE/App/usb_device.c **** #include "usbd_storage_if.h"
+  28:USB_DEVICE/App/usb_device.c **** 
+  29:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN Includes */
+  30:USB_DEVICE/App/usb_device.c **** 
+  31:USB_DEVICE/App/usb_device.c **** /* USER CODE END Includes */
+  32:USB_DEVICE/App/usb_device.c **** 
+ARM GAS  /tmp/ccE3VjoD.s 			page 2
 
 
-  33:USB_DEVICE/App/usb_device.c **** /* Private variables ---------------------------------------------------------*/
-  34:USB_DEVICE/App/usb_device.c **** 
-  35:USB_DEVICE/App/usb_device.c **** /* USER CODE END PV */
-  36:USB_DEVICE/App/usb_device.c **** 
-  37:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN PFP */
-  38:USB_DEVICE/App/usb_device.c **** /* Private function prototypes -----------------------------------------------*/
-  39:USB_DEVICE/App/usb_device.c **** 
-  40:USB_DEVICE/App/usb_device.c **** /* USER CODE END PFP */
-  41:USB_DEVICE/App/usb_device.c **** 
-  42:USB_DEVICE/App/usb_device.c **** /* USB Device Core handle declaration. */
-  43:USB_DEVICE/App/usb_device.c **** USBD_HandleTypeDef hUsbDeviceFS;
-  44:USB_DEVICE/App/usb_device.c **** 
-  45:USB_DEVICE/App/usb_device.c **** /*
-  46:USB_DEVICE/App/usb_device.c ****  * -- Insert your variables declaration here --
-  47:USB_DEVICE/App/usb_device.c ****  */
-  48:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN 0 */
-  49:USB_DEVICE/App/usb_device.c **** 
-  50:USB_DEVICE/App/usb_device.c **** /* USER CODE END 0 */
-  51:USB_DEVICE/App/usb_device.c **** 
-  52:USB_DEVICE/App/usb_device.c **** /*
-  53:USB_DEVICE/App/usb_device.c ****  * -- Insert your external function declaration here --
-  54:USB_DEVICE/App/usb_device.c ****  */
-  55:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN 1 */
-  56:USB_DEVICE/App/usb_device.c **** 
-  57:USB_DEVICE/App/usb_device.c **** /* USER CODE END 1 */
-  58:USB_DEVICE/App/usb_device.c **** 
-  59:USB_DEVICE/App/usb_device.c **** /**
-  60:USB_DEVICE/App/usb_device.c ****   * Init USB device Library, add supported class and start the library
-  61:USB_DEVICE/App/usb_device.c ****   * @retval None
-  62:USB_DEVICE/App/usb_device.c ****   */
-  63:USB_DEVICE/App/usb_device.c **** void MX_USB_DEVICE_Init(void)
-  64:USB_DEVICE/App/usb_device.c **** {
-  27              		.loc 1 64 1 view -0
+  33:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN PV */
+  34:USB_DEVICE/App/usb_device.c **** /* Private variables ---------------------------------------------------------*/
+  35:USB_DEVICE/App/usb_device.c **** 
+  36:USB_DEVICE/App/usb_device.c **** /* USER CODE END PV */
+  37:USB_DEVICE/App/usb_device.c **** 
+  38:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN PFP */
+  39:USB_DEVICE/App/usb_device.c **** /* Private function prototypes -----------------------------------------------*/
+  40:USB_DEVICE/App/usb_device.c **** 
+  41:USB_DEVICE/App/usb_device.c **** /* USER CODE END PFP */
+  42:USB_DEVICE/App/usb_device.c **** 
+  43:USB_DEVICE/App/usb_device.c **** /* USB Device Core handle declaration. */
+  44:USB_DEVICE/App/usb_device.c **** USBD_HandleTypeDef hUsbDeviceFS;
+  45:USB_DEVICE/App/usb_device.c **** 
+  46:USB_DEVICE/App/usb_device.c **** /*
+  47:USB_DEVICE/App/usb_device.c ****  * -- Insert your variables declaration here --
+  48:USB_DEVICE/App/usb_device.c ****  */
+  49:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN 0 */
+  50:USB_DEVICE/App/usb_device.c **** 
+  51:USB_DEVICE/App/usb_device.c **** /* USER CODE END 0 */
+  52:USB_DEVICE/App/usb_device.c **** 
+  53:USB_DEVICE/App/usb_device.c **** /*
+  54:USB_DEVICE/App/usb_device.c ****  * -- Insert your external function declaration here --
+  55:USB_DEVICE/App/usb_device.c ****  */
+  56:USB_DEVICE/App/usb_device.c **** /* USER CODE BEGIN 1 */
+  57:USB_DEVICE/App/usb_device.c **** 
+  58:USB_DEVICE/App/usb_device.c **** /* USER CODE END 1 */
+  59:USB_DEVICE/App/usb_device.c **** 
+  60:USB_DEVICE/App/usb_device.c **** /**
+  61:USB_DEVICE/App/usb_device.c ****   * Init USB device Library, add supported class and start the library
+  62:USB_DEVICE/App/usb_device.c ****   * @retval None
+  63:USB_DEVICE/App/usb_device.c ****   */
+  64:USB_DEVICE/App/usb_device.c **** void MX_USB_DEVICE_Init(void)
+  65:USB_DEVICE/App/usb_device.c **** {
+  27              		.loc 1 65 1 view -0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -102,123 +103,146 @@ ARM GAS  /tmp/ccpSmT9W.s 			page 1
   33              		.cfi_def_cfa_offset 8
   34              		.cfi_offset 3, -8
   35              		.cfi_offset 14, -4
-  65:USB_DEVICE/App/usb_device.c ****   /* USER CODE BEGIN USB_DEVICE_Init_PreTreatment */
-  66:USB_DEVICE/App/usb_device.c **** 
-  67:USB_DEVICE/App/usb_device.c ****   /* USER CODE END USB_DEVICE_Init_PreTreatment */
-  68:USB_DEVICE/App/usb_device.c **** 
-  69:USB_DEVICE/App/usb_device.c ****   /* Init Device Library, add supported class and start the library. */
-  70:USB_DEVICE/App/usb_device.c ****   if (USBD_Init(&hUsbDeviceFS, &FS_Desc, DEVICE_FS) != USBD_OK)
-  36              		.loc 1 70 3 view .LVU1
-  37              		.loc 1 70 7 is_stmt 0 view .LVU2
+  66:USB_DEVICE/App/usb_device.c ****   /* USER CODE BEGIN USB_DEVICE_Init_PreTreatment */
+  67:USB_DEVICE/App/usb_device.c **** 
+  68:USB_DEVICE/App/usb_device.c ****   /* USER CODE END USB_DEVICE_Init_PreTreatment */
+  69:USB_DEVICE/App/usb_device.c **** 
+  70:USB_DEVICE/App/usb_device.c ****   /* Init Device Library, add supported class and start the library. */
+  71:USB_DEVICE/App/usb_device.c ****   if (USBD_Init(&hUsbDeviceFS, &FS_Desc, DEVICE_FS) != USBD_OK)
+  36              		.loc 1 71 3 view .LVU1
+  37              		.loc 1 71 7 is_stmt 0 view .LVU2
   38 0002 0022     		movs	r2, #0
-  39 0004 0B49     		ldr	r1, .L9
-  40 0006 0C48     		ldr	r0, .L9+4
+  39 0004 0F49     		ldr	r1, .L11
+  40 0006 1048     		ldr	r0, .L11+4
   41 0008 FFF7FEFF 		bl	USBD_Init
   42              	.LVL0:
-  43              		.loc 1 70 6 view .LVU3
-  44 000c 48B9     		cbnz	r0, .L6
+  43              		.loc 1 71 6 view .LVU3
+  44 000c 70B9     		cbnz	r0, .L7
+ARM GAS  /tmp/ccE3VjoD.s 			page 3
+
+
   45              	.L2:
-ARM GAS  /tmp/ccpSmT9W.s 			page 3
-
-
-  71:USB_DEVICE/App/usb_device.c ****   {
-  72:USB_DEVICE/App/usb_device.c ****     Error_Handler();
-  73:USB_DEVICE/App/usb_device.c ****   }
-  74:USB_DEVICE/App/usb_device.c ****   if (USBD_RegisterClass(&hUsbDeviceFS, &USBD_HID) != USBD_OK)
-  46              		.loc 1 74 3 is_stmt 1 view .LVU4
-  47              		.loc 1 74 7 is_stmt 0 view .LVU5
-  48 000e 0B49     		ldr	r1, .L9+8
-  49 0010 0948     		ldr	r0, .L9+4
+  72:USB_DEVICE/App/usb_device.c ****   {
+  73:USB_DEVICE/App/usb_device.c ****     Error_Handler();
+  74:USB_DEVICE/App/usb_device.c ****   }
+  75:USB_DEVICE/App/usb_device.c ****   if (USBD_RegisterClass(&hUsbDeviceFS, &USBD_MSC) != USBD_OK)
+  46              		.loc 1 75 3 is_stmt 1 view .LVU4
+  47              		.loc 1 75 7 is_stmt 0 view .LVU5
+  48 000e 0F49     		ldr	r1, .L11+8
+  49 0010 0D48     		ldr	r0, .L11+4
   50 0012 FFF7FEFF 		bl	USBD_RegisterClass
   51              	.LVL1:
-  52              		.loc 1 74 6 view .LVU6
-  53 0016 38B9     		cbnz	r0, .L7
+  52              		.loc 1 75 6 view .LVU6
+  53 0016 60B9     		cbnz	r0, .L8
   54              	.L3:
-  75:USB_DEVICE/App/usb_device.c ****   {
-  76:USB_DEVICE/App/usb_device.c ****     Error_Handler();
-  77:USB_DEVICE/App/usb_device.c ****   }
-  78:USB_DEVICE/App/usb_device.c ****   if (USBD_Start(&hUsbDeviceFS) != USBD_OK)
-  55              		.loc 1 78 3 is_stmt 1 view .LVU7
-  56              		.loc 1 78 7 is_stmt 0 view .LVU8
-  57 0018 0748     		ldr	r0, .L9+4
-  58 001a FFF7FEFF 		bl	USBD_Start
-  59              	.LVL2:
-  60              		.loc 1 78 6 view .LVU9
-  61 001e 30B9     		cbnz	r0, .L8
-  62              	.L1:
-  79:USB_DEVICE/App/usb_device.c ****   {
-  80:USB_DEVICE/App/usb_device.c ****     Error_Handler();
-  81:USB_DEVICE/App/usb_device.c ****   }
-  82:USB_DEVICE/App/usb_device.c **** 
-  83:USB_DEVICE/App/usb_device.c ****   /* USER CODE BEGIN USB_DEVICE_Init_PostTreatment */
-  84:USB_DEVICE/App/usb_device.c **** 
-  85:USB_DEVICE/App/usb_device.c ****   /* USER CODE END USB_DEVICE_Init_PostTreatment */
-  86:USB_DEVICE/App/usb_device.c **** }
-  63              		.loc 1 86 1 view .LVU10
-  64 0020 08BD     		pop	{r3, pc}
-  65              	.L6:
-  72:USB_DEVICE/App/usb_device.c ****   }
-  66              		.loc 1 72 5 is_stmt 1 view .LVU11
-  67 0022 FFF7FEFF 		bl	Error_Handler
+  76:USB_DEVICE/App/usb_device.c ****   {
+  77:USB_DEVICE/App/usb_device.c ****     Error_Handler();
+  78:USB_DEVICE/App/usb_device.c ****   }
+  79:USB_DEVICE/App/usb_device.c ****   if (USBD_MSC_RegisterStorage(&hUsbDeviceFS, &USBD_Storage_Interface_fops_FS) != USBD_OK)
+  55              		.loc 1 79 3 is_stmt 1 view .LVU7
+  56              		.loc 1 79 7 is_stmt 0 view .LVU8
+  57 0018 0D49     		ldr	r1, .L11+12
+  58 001a 0B48     		ldr	r0, .L11+4
+  59 001c FFF7FEFF 		bl	USBD_MSC_RegisterStorage
+  60              	.LVL2:
+  61              		.loc 1 79 6 view .LVU9
+  62 0020 50B9     		cbnz	r0, .L9
+  63              	.L4:
+  80:USB_DEVICE/App/usb_device.c ****   {
+  81:USB_DEVICE/App/usb_device.c ****     Error_Handler();
+  82:USB_DEVICE/App/usb_device.c ****   }
+  83:USB_DEVICE/App/usb_device.c ****   if (USBD_Start(&hUsbDeviceFS) != USBD_OK)
+  64              		.loc 1 83 3 is_stmt 1 view .LVU10
+  65              		.loc 1 83 7 is_stmt 0 view .LVU11
+  66 0022 0948     		ldr	r0, .L11+4
+  67 0024 FFF7FEFF 		bl	USBD_Start
   68              	.LVL3:
-  69 0026 F2E7     		b	.L2
-  70              	.L7:
-  76:USB_DEVICE/App/usb_device.c ****   }
-  71              		.loc 1 76 5 view .LVU12
-  72 0028 FFF7FEFF 		bl	Error_Handler
-  73              	.LVL4:
-  74 002c F4E7     		b	.L3
-  75              	.L8:
-  80:USB_DEVICE/App/usb_device.c ****   }
-  76              		.loc 1 80 5 view .LVU13
-  77 002e FFF7FEFF 		bl	Error_Handler
-  78              	.LVL5:
-  79              		.loc 1 86 1 is_stmt 0 view .LVU14
-  80 0032 F5E7     		b	.L1
-  81              	.L10:
-  82              		.align	2
-  83              	.L9:
-ARM GAS  /tmp/ccpSmT9W.s 			page 4
+  69              		.loc 1 83 6 view .LVU12
+  70 0028 48B9     		cbnz	r0, .L10
+  71              	.L1:
+  84:USB_DEVICE/App/usb_device.c ****   {
+  85:USB_DEVICE/App/usb_device.c ****     Error_Handler();
+  86:USB_DEVICE/App/usb_device.c ****   }
+  87:USB_DEVICE/App/usb_device.c **** 
+  88:USB_DEVICE/App/usb_device.c ****   /* USER CODE BEGIN USB_DEVICE_Init_PostTreatment */
+  89:USB_DEVICE/App/usb_device.c **** 
+  90:USB_DEVICE/App/usb_device.c ****   /* USER CODE END USB_DEVICE_Init_PostTreatment */
+  91:USB_DEVICE/App/usb_device.c **** }
+  72              		.loc 1 91 1 view .LVU13
+  73 002a 08BD     		pop	{r3, pc}
+  74              	.L7:
+  73:USB_DEVICE/App/usb_device.c ****   }
+  75              		.loc 1 73 5 is_stmt 1 view .LVU14
+  76 002c FFF7FEFF 		bl	Error_Handler
+  77              	.LVL4:
+  78 0030 EDE7     		b	.L2
+  79              	.L8:
+  77:USB_DEVICE/App/usb_device.c ****   }
+ARM GAS  /tmp/ccE3VjoD.s 			page 4
 
 
-  84 0034 00000000 		.word	FS_Desc
-  85 0038 00000000 		.word	hUsbDeviceFS
-  86 003c 00000000 		.word	USBD_HID
-  87              		.cfi_endproc
-  88              	.LFE68:
-  90              		.global	hUsbDeviceFS
-  91              		.section	.bss.hUsbDeviceFS,"aw",%nobits
-  92              		.align	2
-  95              	hUsbDeviceFS:
-  96 0000 00000000 		.space	708
-  96      00000000 
-  96      00000000 
-  96      00000000 
-  96      00000000 
-  97              		.text
-  98              	.Letext0:
-  99              		.file 2 "/home/tanjie/EmbeddedLibrary/arm-gnu-toolchain-12.2.rel1-x86_64-arm-none-eabi/arm-none-ea
- 100              		.file 3 "/home/tanjie/EmbeddedLibrary/arm-gnu-toolchain-12.2.rel1-x86_64-arm-none-eabi/arm-none-ea
- 101              		.file 4 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
- 102              		.file 5 "USB_DEVICE/App/usbd_desc.h"
- 103              		.file 6 "Middlewares/ST/STM32_USB_Device_Library/Class/Keyboard_Mouse_HID/Inc/usbd_hid.h"
- 104              		.file 7 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
- 105              		.file 8 "Core/Inc/main.h"
-ARM GAS  /tmp/ccpSmT9W.s 			page 5
+  80              		.loc 1 77 5 view .LVU15
+  81 0032 FFF7FEFF 		bl	Error_Handler
+  82              	.LVL5:
+  83 0036 EFE7     		b	.L3
+  84              	.L9:
+  81:USB_DEVICE/App/usb_device.c ****   }
+  85              		.loc 1 81 5 view .LVU16
+  86 0038 FFF7FEFF 		bl	Error_Handler
+  87              	.LVL6:
+  88 003c F1E7     		b	.L4
+  89              	.L10:
+  85:USB_DEVICE/App/usb_device.c ****   }
+  90              		.loc 1 85 5 view .LVU17
+  91 003e FFF7FEFF 		bl	Error_Handler
+  92              	.LVL7:
+  93              		.loc 1 91 1 is_stmt 0 view .LVU18
+  94 0042 F2E7     		b	.L1
+  95              	.L12:
+  96              		.align	2
+  97              	.L11:
+  98 0044 00000000 		.word	FS_Desc
+  99 0048 00000000 		.word	hUsbDeviceFS
+ 100 004c 00000000 		.word	USBD_MSC
+ 101 0050 00000000 		.word	USBD_Storage_Interface_fops_FS
+ 102              		.cfi_endproc
+ 103              	.LFE68:
+ 105              		.global	hUsbDeviceFS
+ 106              		.section	.bss.hUsbDeviceFS,"aw",%nobits
+ 107              		.align	2
+ 110              	hUsbDeviceFS:
+ 111 0000 00000000 		.space	708
+ 111      00000000 
+ 111      00000000 
+ 111      00000000 
+ 111      00000000 
+ 112              		.text
+ 113              	.Letext0:
+ 114              		.file 2 "/home/tanjie/EmbeddedLibrary/arm-gnu-toolchain-12.2.rel1-x86_64-arm-none-eabi/arm-none-ea
+ 115              		.file 3 "/home/tanjie/EmbeddedLibrary/arm-gnu-toolchain-12.2.rel1-x86_64-arm-none-eabi/arm-none-ea
+ 116              		.file 4 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 117              		.file 5 "Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc.h"
+ 118              		.file 6 "USB_DEVICE/App/usbd_desc.h"
+ 119              		.file 7 "USB_DEVICE/App/usbd_storage_if.h"
+ 120              		.file 8 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
+ 121              		.file 9 "Core/Inc/main.h"
+ARM GAS  /tmp/ccE3VjoD.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usb_device.c
-     /tmp/ccpSmT9W.s:19     .text.MX_USB_DEVICE_Init:0000000000000000 $t
-     /tmp/ccpSmT9W.s:25     .text.MX_USB_DEVICE_Init:0000000000000000 MX_USB_DEVICE_Init
-     /tmp/ccpSmT9W.s:84     .text.MX_USB_DEVICE_Init:0000000000000034 $d
-     /tmp/ccpSmT9W.s:95     .bss.hUsbDeviceFS:0000000000000000 hUsbDeviceFS
-     /tmp/ccpSmT9W.s:92     .bss.hUsbDeviceFS:0000000000000000 $d
+     /tmp/ccE3VjoD.s:19     .text.MX_USB_DEVICE_Init:0000000000000000 $t
+     /tmp/ccE3VjoD.s:25     .text.MX_USB_DEVICE_Init:0000000000000000 MX_USB_DEVICE_Init
+     /tmp/ccE3VjoD.s:98     .text.MX_USB_DEVICE_Init:0000000000000044 $d
+     /tmp/ccE3VjoD.s:110    .bss.hUsbDeviceFS:0000000000000000 hUsbDeviceFS
+     /tmp/ccE3VjoD.s:107    .bss.hUsbDeviceFS:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 USBD_Init
 USBD_RegisterClass
+USBD_MSC_RegisterStorage
 USBD_Start
 Error_Handler
 FS_Desc
-USBD_HID
+USBD_MSC
+USBD_Storage_Interface_fops_FS
